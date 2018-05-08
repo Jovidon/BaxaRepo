@@ -11,6 +11,8 @@ import { MyApp } from './app.component';
 import { HomePage } from './../pages/home/home';
 import { NewPage } from './../pages/new/new';
 import { ListPage } from './../pages/list/list'; 
+import { LoginPage } from './../pages/login/login'; 
+import { SignupPage }  from './../pages/signup/signup';
 
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -25,7 +27,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     NewPage,
-    ListPage
+    ListPage,
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     NewPage,
-    ListPage
+    ListPage,
+    LoginPage,
+    SignupPage
     
   ],
   providers: [

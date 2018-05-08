@@ -40,9 +40,9 @@ export class GetdataProvider {
 
   }
  
-  submit(name, surname) {
+  submit(login, password) {
     
-    let info = name + " " +surname;
+    let info = login + " " +password;
    var myData = JSON.stringify({info});
 
     this.http.post('http://192.168.137.1/api.php', myData).subscribe( (data) =>{
@@ -51,6 +51,7 @@ export class GetdataProvider {
           this.serverdata = data;
       }
   });
+
   
     let toast = this.toast.create({
       message : "Jo'natildi!",
@@ -61,5 +62,20 @@ export class GetdataProvider {
     
 
 
+  }
+
+
+
+  registr(  surname ,name, login, password) {
+    
+    let info = surname + "@" +name+"@"+login + "@" +password;
+   var myData = JSON.stringify({info});
+
+    this.http.post('http://192.168.137.1/api.php', myData).subscribe( (data) =>{
+      if(data){
+          console.log(data);
+          this.serverdata = data;
+      }
+  });
   }
 }

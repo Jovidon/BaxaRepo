@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar text-center>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <br>
+      <br>
+      <br>
+    </ion-row>
+    <ion-row>
+      <ion-col offset-1>
+        <ion-item float>  
+          <ion-label>Login</ion-label>
+          <ion-input [(ngModel)]="login"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col offset-1>
+          <ion-item float>  
+            <ion-label>Password</ion-label>
+            <ion-input [(ngModel)]="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col offset-4>
+            <button ion-button (click)="LogIn()">Enter
+            </button>
+          </ion-col>
+        </ion-row>
+      <ion-row>
+        <ion-col offset-4>
+          <div (click)="goToSignUp()"><u>Sign up</u></div>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>

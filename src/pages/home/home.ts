@@ -32,12 +32,7 @@ export class HomePage {
         this.getdata.submit(this.info, this.infosurname);
   }
 
-  Get(){
-     this.getdata.getTimeTable().then(data => {
-       this.timetable = data;
-       console.log(data);
-    });
-  }
+  
 
 
 

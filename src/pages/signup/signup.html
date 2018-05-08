@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>SignUp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-content padding>
+        <ion-grid>
+          <ion-row>
+            <br>
+            <br>
+            <br>
+          </ion-row>
+          <ion-row>
+              <ion-col offset-1>
+                <ion-item float>  
+                  <ion-label>Surname</ion-label>
+                  <ion-input [(ngModel)]="surname"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col offset-1>
+                  <ion-item float>  
+                    <ion-label>Name</ion-label>
+                    <ion-input [(ngModel)]="name"></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+          <ion-row>
+            <ion-col offset-1>
+              <ion-item float>  
+                <ion-label>Login</ion-label>
+                <ion-input [(ngModel)]="login"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col offset-1>
+                <ion-item float>  
+                  <ion-label>Password</ion-label>
+                  <ion-input [(ngModel)]="password"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col offset-2>
+                <button ion-button (click)="registr()">
+                    Registr
+                </button>
+              </ion-col>
+            </ion-row>
+            </ion-grid>
+</ion-content>
