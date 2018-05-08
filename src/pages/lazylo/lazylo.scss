@@ -1,0 +1,15 @@
+page-lazylo {
+    .textarea {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        width: 95%;
+        height: 40%;
+        border-color: green;
+    }
+    .input {
+        padding: 0 !important;
+        margin: 0 0 15px;
+        display: block;
+    }
+}

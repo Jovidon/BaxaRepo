@@ -1,0 +1,54 @@
+<!--
+  Generated template for the NewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>new</ion-title>
+  </ion-navbar>
+
+
+
+</ion-header>
+
+
+<ion-content padding>
+<button ion-button (click)="getTeacher()">OK</button>
+
+<ion-row>
+  <ion-col col-6 text-center>
+      <div>
+          <img width="75%" height="75%" src="assets/imgs/TATU.png">
+          <ion-label>TATU SF</ion-label>
+      </div>
+    
+  </ion-col>
+  <ion-col col-6  text-center>
+      <div>
+          <img width="75%" height="75%" src="assets/imgs/news.png">
+          <ion-label>Yangiliklar</ion-label>
+      </div>
+              
+    </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col col-6  text-center>
+    <div  class="item" (click)="See()">
+       <div *ngIf="!isSeen">
+          <span class="notify-badge">333</span>
+       </div>
+        <img width="75%" height="75%" src="assets/imgs/Statnew.png">
+        <ion-label>Statistika</ion-label>
+    </div>
+  </ion-col>
+  <ion-col col-6  text-center> 
+    <div>
+        <img width="75%" height="75%" src="assets/imgs/contact.png">
+        <ion-label>Bog'lanish</ion-label>
+    </div>
+  </ion-col>
+</ion-row>
+</ion-content>
