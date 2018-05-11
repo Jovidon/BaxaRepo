@@ -1,3 +1,10 @@
 page-lessons {
-
+.piz {
+     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+p.block {
+    width: 300px;
+}
 }

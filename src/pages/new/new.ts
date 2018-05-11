@@ -19,13 +19,8 @@ export class NewPage {
   created_date : any [];
   image : any [];
   id : any [];
- 
   constructor(public navCtrl: NavController, public navParams: NavParams,public getdata : GetdataProvider) {
  this.getNews();
-  for (let i = 0; i < 1; i++) {
-  console.log(this.news);
-}
-  
  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewPage');
@@ -43,18 +38,21 @@ export class NewPage {
     });
   }
 
+
   doInfinite(infiniteScroll) {
+
 console.log('Begin async operation');
 
 setTimeout(() => {
 for (let i = 0; i < 1; i++) {
- console.log(this.news);
+ this.getNews();
 }
 
 console.log('Async operation has ended');
 infiniteScroll.complete();
 }, 500);
 }
+
 
 
   

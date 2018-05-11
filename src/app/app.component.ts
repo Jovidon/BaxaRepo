@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from './../pages/login/login'; 
 import { NewPage }  from './../pages/new/new';
+import { LessonsPage }  from './../pages/lessons/lessons';
+
 
 @Component({
   templateUrl: 'app.html'

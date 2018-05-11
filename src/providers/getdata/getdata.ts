@@ -15,13 +15,13 @@ export class GetdataProvider {
    constructor(public http: HttpClient, private toast : ToastController) {
 
     // this.data = "Salom";
-    this.link = "http://wecode.uz/api/news/index"
+    this.link = "http://192.168.137.1/api/";
     console.log('Hello GetdataProvider Provider');
   }
  
   getUsers() {
     return new Promise(resolve => {
-      this.http.get('http://wecode.uz/api/users/get').subscribe(data => {
+      this.http.get(this.link+'users/get').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -31,7 +31,18 @@ export class GetdataProvider {
   
   getNews(){
     return new Promise(resolve => {
-      this.http.get('http://wecode.uz/api/news/index').subscribe(data => {
+      this.http.get(this.link+'news/index').subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+
+  }
+
+  getLess(){
+    return new Promise(resolve => {
+      this.http.get(this.link+'lessons/index').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -40,12 +51,13 @@ export class GetdataProvider {
 
   }
  
+ 
   submit(login, password) {
     
  //   let info = login_in + " " +pass_in;
    var myData = JSON.stringify({login, password});
 
-    this.http.post('http://wecode.uz/api/users/get', myData).subscribe( (data) =>{
+    this.http.post(this.link+'users/get', myData).subscribe( (data) =>{
       if(data){
           console.log(data);
           this.serverdata = data;

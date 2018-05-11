@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GetdataProvider } from './../providers/getdata/getdata';
 import { MyApp } from './app.component';
 
+
 //pages 
 
 import { HomePage } from './../pages/home/home';
@@ -13,6 +14,7 @@ import { NewPage } from './../pages/new/new';
 import { ListPage } from './../pages/list/list'; 
 import { LoginPage } from './../pages/login/login'; 
 import { SignupPage }  from './../pages/signup/signup';
+import { LessonsPage }  from './../pages/lessons/lessons';
 
 
 
@@ -23,6 +25,7 @@ import { HttpClient} from '@angular/common/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +33,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     NewPage,
     ListPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    LessonsPage
+      
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     NewPage,
     ListPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    LessonsPage
     
   ],
   providers: [
