@@ -15,7 +15,9 @@ import { ListPage } from './../pages/list/list';
 import { LoginPage } from './../pages/login/login'; 
 import { SignupPage }  from './../pages/signup/signup';
 import { LessonsPage }  from './../pages/lessons/lessons';
-
+import { LanguagePage } from './../pages/language/language';
+import { LazyloPage } from './../pages/lazylo/lazylo'; 
+import { FullNewPage } from './../pages/full-new/full-new';
 
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -34,7 +36,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     LoginPage,
     SignupPage,
-    LessonsPage
+    LessonsPage,
+    LanguagePage,
+    LazyloPage,
+    FullNewPage
       
   ],
   imports: [
@@ -59,8 +64,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     LoginPage,
     SignupPage,
-    LessonsPage
-    
+    LessonsPage,
+    LanguagePage,
+    LazyloPage,
+    FullNewPage
   ],
   providers: [
     StatusBar,

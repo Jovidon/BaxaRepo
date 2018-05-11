@@ -14,7 +14,7 @@
   <div class="page-header header-filter" filter-color="purple" style="background-image: url('assets/img/bg7.jpg')">
     <div class="container">
      
-    <ion-slides    speed="500" class="slides" >
+    <ion-slides   speed="500" class="slides" >
       <ion-slide >
          <div class="row" style="margin-top: -15px;">
         <div class="col-md-7 ml-auto mr-auto">
@@ -37,7 +37,36 @@
          <div class="row" style="margin-top: -15px;">
         <div class="col-md-7 ml-auto mr-auto">
         <div class="card card-signup" style="min-height: 300px; background: #ffffffe0">
-       <h1>Good bye!!!</h1>
+            <ion-grid text-center>
+                <ion-col col-3></ion-col>
+                <ion-col col-8 >
+                    <ion-row>
+                      <ion-col offset-5>
+                          <h3>Tilni tanlang</h3>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col offset-4>
+                          <h3> Выберите язык</h3> 
+                      </ion-col>
+                    </ion-row>  
+                    <ion-row >
+                      <div offset-6 (click)="go(uz)">
+                        <ion-img width="120" height="60" src="assets/imgs/uzFlag.png"></ion-img> 
+                       
+                        <br>O'zbek tili
+                      </div>
+                    </ion-row>
+                    <ion-row>
+                      <div  offset-6 (click)="go(ru)">
+                       <ion-img width="120" height="60" src="assets/imgs/ruFlag.png"></ion-img> 
+                       
+                        <br>Русский язык
+                      </div>
+                    </ion-row>
+                  </ion-col>
+                  <ion-col col-1></ion-col>
+              </ion-grid>
        <div class="text-center">
        <button ion-button (click)="go()"  style="width: 200px;">START</button>
        </div>
