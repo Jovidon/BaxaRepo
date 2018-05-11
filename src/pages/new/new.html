@@ -7,17 +7,6 @@
 
 </ion-header>
 
-<ion-content >
+<ion-content>
   
-      <ion-card text-wrap *ngFor="let item of realNews">
-         <div class="ion-header">{{item.title_uz}}</div>
-           <img src="http://wecode.uz/uploads/{{item.image}}" />
-           <p>{{item.content_uz}}</p>
-      </ion-card>
-
-  
-<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
-<ion-infinite-scroll-content></ion-infinite-scroll-content>
-</ion-infinite-scroll>
-
 </ion-content>

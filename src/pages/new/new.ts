@@ -20,16 +20,9 @@ export class NewPage {
   image : any [];
   id : any [];
   
-  realNews : any ;
-  items = [];
-  
-
   constructor(public navCtrl: NavController, public navParams: NavParams,public getdata : GetdataProvider) {
     this.getNews();
-    for (let i = 0; i < 30; i++) {
-      this.items.push( this.items.length );
-    }
-    
+   
  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewPage');
@@ -46,25 +39,5 @@ export class NewPage {
       console.log(this.news);
     });
   }
-
-  doInfinite(infiniteScroll) {
-  
-    setTimeout(() => {
-      this.getdata.getNews()
-      .then(data => {
-        this.news = data;
-        //console.log(this.news);
-        for(let i=0; i<this.news.length; i++) {
-          this.realNews.push(this.news[i]);
-        }
-
-      });
-         
-     
-      infiniteScroll.complete();
-    }, 500);
-  }
-
-  
   
 }
