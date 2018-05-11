@@ -19,8 +19,12 @@ export class NewPage {
   created_date : any [];
   image : any [];
   id : any [];
+
+  
   constructor(public navCtrl: NavController, public navParams: NavParams,public getdata : GetdataProvider) {
- this.getNews();
+    this.getNews();
+   
+
  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewPage');
@@ -55,6 +59,5 @@ infiniteScroll.complete();
 
 
 
-  
   
 }
