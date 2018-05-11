@@ -21,7 +21,10 @@ export class NewPage {
   id : any [];
  
   constructor(public navCtrl: NavController, public navParams: NavParams,public getdata : GetdataProvider) {
-    this.getNews();
+ this.getNews();
+  for (let i = 0; i < 1; i++) {
+  console.log(this.news);
+}
   
  }
   ionViewDidLoad() {
@@ -39,6 +42,20 @@ export class NewPage {
       console.log(this.news);
     });
   }
+
+  doInfinite(infiniteScroll) {
+console.log('Begin async operation');
+
+setTimeout(() => {
+for (let i = 0; i < 1; i++) {
+ console.log(this.news);
+}
+
+console.log('Async operation has ended');
+infiniteScroll.complete();
+}, 500);
+}
+
 
   
   

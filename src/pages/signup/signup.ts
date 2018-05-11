@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GetdataProvider } from './../../providers/getdata/getdata';
 
 import { HomePage } from './../home/home';
+import { NewPage } from './../new/new';
 
 @IonicPage()
 @Component({
@@ -29,7 +30,7 @@ export class SignupPage {
   }
   home_go(){
     this.navCtrl.pop();
-   this.navCtrl.push(HomePage);
+   this.navCtrl.push(NewPage);
   }
 
 
