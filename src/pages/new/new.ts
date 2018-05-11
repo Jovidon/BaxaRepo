@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { GetdataProvider } from './../../providers/getdata/getdata';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 
 
 @IonicPage()
@@ -8,30 +10,36 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'new.html',
 })
 export class NewPage {
-  isSeen : boolean = false;
-  teacherRu : any [];
-  teacherUz : any [];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  news : any  ;
+  title_ru : any [];
+  title_uz : any [];
+  content_uz : any [];
+  content_ru : any [];
+  category_id : any [];
+  created_date : any [];
+  image : any [];
+  id : any [];
+ 
+  constructor(public navCtrl: NavController, public navParams: NavParams,public getdata : GetdataProvider) {
+    this.getNews();
   
-
-  }
-
-  
-
-
+ }
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewPage');
   }
 
   go(){
-    this.navCtrl.push('LazyloPage');
-  }
-  See(){
-    this.isSeen = true;
-    this.ionViewDidLoad();
+    this.navCtrl.push('ListPage');
   }
 
-  getTeacher(teachId : number){
-   return "salom";
+   getNews() {
+    this.getdata.getNews()
+    .then(data => {
+      this.news = data;
+      console.log(this.news);
+    });
   }
+
+  
+  
 }

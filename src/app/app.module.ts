@@ -15,6 +15,7 @@ import { LoginPage } from './../pages/login/login';
 import { SignupPage }  from './../pages/signup/signup';
 
 
+
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient} from '@angular/common/http';

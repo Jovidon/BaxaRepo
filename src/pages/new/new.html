@@ -10,45 +10,18 @@
     <ion-title>new</ion-title>
   </ion-navbar>
 
-
-
 </ion-header>
 
+<ion-content >
+      <ion-card text-wrap *ngFor="let item of news">
+         <div class="ion-header">{{item.title_uz}}</div>
+           <img src="http://wecode.uz/uploads/{{item.image}}" />
+           <p>{{item.content_uz}}</p>
+      </ion-card>
 
-<ion-content padding>
-<button ion-button (click)="getTeacher()">OK</button>
+  
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+<ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
 
-<ion-row>
-  <ion-col col-6 text-center>
-      <div>
-          <img width="75%" height="75%" src="assets/imgs/TATU.png">
-          <ion-label>TATU SF</ion-label>
-      </div>
-    
-  </ion-col>
-  <ion-col col-6  text-center>
-      <div>
-          <img width="75%" height="75%" src="assets/imgs/news.png">
-          <ion-label>Yangiliklar</ion-label>
-      </div>
-              
-    </ion-col>
-</ion-row>
-<ion-row>
-  <ion-col col-6  text-center>
-    <div  class="item" (click)="See()">
-       <div *ngIf="!isSeen">
-          <span class="notify-badge">333</span>
-       </div>
-        <img width="75%" height="75%" src="assets/imgs/Statnew.png">
-        <ion-label>Statistika</ion-label>
-    </div>
-  </ion-col>
-  <ion-col col-6  text-center> 
-    <div>
-        <img width="75%" height="75%" src="assets/imgs/contact.png">
-        <ion-label>Bog'lanish</ion-label>
-    </div>
-  </ion-col>
-</ion-row>
 </ion-content>

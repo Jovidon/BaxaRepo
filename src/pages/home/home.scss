@@ -1,3 +1,55 @@
 page-home {
 
+ @import "../../assets/scss/material-kit/variables";
+ @import "../../assets/scss/material-kit/mixins";
+ @import "../../assets/scss/material-kit/core-bootstrap";
+ @import "../../assets/scss/material-kit/reboot";
+
+ // Core Components
+ @import "../../assets/scss/material-kit/layout";
+ @import "../../assets/scss/material-kit/buttons";
+ @import "../../assets/scss/material-kit/misc";
+ @import "../../assets/scss/material-kit/checkboxes";
+ @import "../../assets/scss/material-kit/custom-forms";
+ @import "../../assets/scss/material-kit/switches";
+ @import "../../assets/scss/material-kit/radios";
+ @import "../../assets/scss/material-kit/carousel";
+ @import "../../assets/scss/material-kit/forms";
+ @import "../../assets/scss/material-kit/input-group";
+ @import "../../assets/scss/material-kit/list-group";
+ @import "../../assets/scss/material-kit/nav";
+ @import "../../assets/scss/material-kit/images";
+ @import "../../assets/scss/material-kit/navbar";
+ @import "../../assets/scss/material-kit/badges";
+ @import "../../assets/scss/material-kit/alerts";
+ @import "../../assets/scss/material-kit/pagination";
+ @import "../../assets/scss/material-kit/pills";
+ @import "../../assets/scss/material-kit/info-areas";
+ @import "../../assets/scss/material-kit/type";
+ @import "../../assets/scss/material-kit/tabs";
+ @import "../../assets/scss/material-kit/tooltip";
+ @import "../../assets/scss/material-kit/popover";
+ @import "../../assets/scss/material-kit/modal";
+ @import "../../assets/scss/material-kit/dropdown";
+ @import "../../assets/scss/material-kit/drawer";
+ @import "../../assets/scss/material-kit/progress";
+ @import "../../assets/scss/material-kit/togglebutton";
+ @import "../../assets/scss/material-kit/ripples";
+ @import "../../assets/scss/material-kit/headers";
+ @import "../../assets/scss/material-kit/footers";
+
+ // Cards
+ @import '../../assets/scss/material-kit/cards';
+ @import '../../assets/scss/material-kit/cards/card-carousel';
+ @import '../../assets/scss/material-kit/cards/card-signup';
+ @import '../../assets/scss/material-kit/cards/card-plain';
+
+ // Core Plugins
+ @import '../../assets/scss/material-kit/plugins/plugin-datetime-picker';
+ @import '../../assets/scss/material-kit/plugins/plugin-nouislider';
+
+ // Sections and Example pages
+ @import "../../assets/scss/material-kit/example-pages";
+ @import "../../assets/scss/material-kit/responsive";
+
 }

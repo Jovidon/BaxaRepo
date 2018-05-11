@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { GetdataProvider} from './../../providers/getdata/getdata';
 import { HttpClient } from '@angular/common/http';
-
+import { SignupPage } from '../signup/signup';
+import { NewPage } from '../new/new';
+import { ListPage } from '../list/list';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -31,6 +33,19 @@ export class HomePage {
  
         this.getdata.submit(this.info, this.infosurname);
   }
+
+
+reg(){
+   this.navCtrl.push(SignupPage);
+   
+}
+
+go () {
+  this.navCtrl.push(HomePage);
+}
+help() {
+  this.navCtrl.push(ListPage);
+}
 
   
 

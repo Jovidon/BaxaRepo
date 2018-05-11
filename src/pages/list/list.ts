@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GetdataProvider } from './../../providers/getdata/getdata';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
@@ -6,32 +7,44 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'list.html'
 })
 export class ListPage {
-  selectedItem: any;
-  icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+ items = [];
+ news : any  ;
+  title_ru : any [];
+  title_uz : any [];
+  content_uz : any [];
+  content_ru : any [];
+  category_id : any [];
+  created_date : any [];
+  image : any [];
+  id : any [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
+ constructor(public navCtrl: NavController, public navParams: NavParams,public getdata : GetdataProvider) {
+for (let i = 0; i < 15; i++) {
+this.items.push( this.items.length );
 
-    // Let's populate this page with some filler content for funzies
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
+}
+}
 
-    this.items = [];
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
-  }
-
-  itemTapped(event, item) {
-    // That's right, we're pushing to ourselves!
-    this.navCtrl.push(ListPage, {
-      item: item
+ getNews() {
+    this.getdata.getNews()
+    .then(data => {
+      this.news = data;
+      console.log(this.news);
     });
   }
+
+
+doInfinite(infiniteScroll) {
+console.log('Begin async operation');
+
+setTimeout(() => {
+for (let i = 0; i < 15; i++) {
+this.items.push( this.items.length );
+}
+
+console.log('Async operation has ended');
+infiniteScroll.complete();
+}, 500);
+}
+
 }

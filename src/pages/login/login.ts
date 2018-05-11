@@ -20,13 +20,9 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  LogIn(){
-    this.getdata.submit(this.login, this.password);
-    this.navCtrl.setRoot(HomePage);
-  }
+ go (){
   
-  goToSignUp(){
-    this.navCtrl.push(SignupPage);
-  }
+   this.navCtrl.setRoot(HomePage);
+}
 
 }

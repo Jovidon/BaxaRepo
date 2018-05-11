@@ -8,9 +8,6 @@ import { NewPage } from './new';
   ],
   imports: [
     IonicPageModule.forChild(NewPage),
-  ], 
-  exports : [
-    NewPage
-  ]
+  ],
 })
 export class NewPageModule {}

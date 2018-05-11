@@ -12,16 +12,16 @@ export class GetdataProvider {
   logic : boolean;
   serverdata : any;
 
-  constructor(public http: HttpClient, private toast : ToastController) {
+   constructor(public http: HttpClient, private toast : ToastController) {
 
-    this.data = "Salom";
-    this.link = "192.168.137.1/api.php"
+    // this.data = "Salom";
+    this.link = "http://wecode.uz/api/news/index"
     console.log('Hello GetdataProvider Provider');
   }
  
   getUsers() {
     return new Promise(resolve => {
-      this.http.get('http://192.168.137.1/api.php').subscribe(data => {
+      this.http.get('http://wecode.uz/api/users/get').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -29,9 +29,9 @@ export class GetdataProvider {
     });
   }
   
-  getTimeTable(){
+  getNews(){
     return new Promise(resolve => {
-      this.http.get('http://192.168.137.1/api.php').subscribe(data => {
+      this.http.get('http://wecode.uz/api/news/index').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
@@ -42,21 +42,36 @@ export class GetdataProvider {
  
   submit(login, password) {
     
-    let info = login + " " +password;
-   var myData = JSON.stringify({info});
+ //   let info = login_in + " " +pass_in;
+   var myData = JSON.stringify({login, password});
 
-    this.http.post('http://192.168.137.1/api.php', myData).subscribe( (data) =>{
+    this.http.post('http://wecode.uz/api/users/get', myData).subscribe( (data) =>{
       if(data){
           console.log(data);
           this.serverdata = data;
       }
-  });
+   });
 
+
+
+// const req = this.http.post('http://wecode.uz/api/users/create', {
+//       login: login_in,
+//       password: pass_in
+//     })
+//       .subscribe(
+//         res => {
+//           console.log(res);
+//         },
+//         err => {
+//           console.log("Error occured");
+//         }
+//       );
+//   }
   
     let toast = this.toast.create({
       message : "Jo'natildi!",
       duration : 3000,
-      position : 'middle'
+      position : 'bottom'
     });
     toast.present();
     
@@ -64,18 +79,32 @@ export class GetdataProvider {
 
   }
 
-
-
-  registr(  surname ,name, login, password) {
-    
-    let info = surname + "@" +name+"@"+login + "@" +password;
-   var myData = JSON.stringify({info});
-
-    this.http.post('http://192.168.137.1/api.php', myData).subscribe( (data) =>{
-      if(data){
-          console.log(data);
-          this.serverdata = data;
-      }
+apiUrl="http://wecode.uz/api/users/create";
+registr(data) {
+  return new Promise((resolve, reject) => {
+    this.http.post(this.apiUrl, JSON.stringify(data))
+      .subscribe(res => {
+        resolve(res);
+      }, (err) => {
+        reject(err);
+      });
   });
-  }
+}
+
+
+
+  // registr(  first_name ,last_name, login, password,rate,role) {
+    
+  // //  let info = first_name + "@" +last_name+"@"+login + "@" +password + @;
+  //  var myData = JSON.stringify({first_name,last_name,login,password,rate,role});
+
+  //   this.http.post('http://wecode.uz/api/users/create', myData).subscribe( (data) =>{
+  //     if(data){
+  //         console.log(data);
+  //         this.serverdata = data;
+  //     }
+  // });
+  // }
+
+
 }

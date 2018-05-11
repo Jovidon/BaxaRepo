@@ -23,8 +23,18 @@ export class SignupPage {
     console.log('ionViewDidLoad SignupPage');
   }
 
+  go(){
+    this.navCtrl.pop();
+   this.navCtrl.push(HomePage);
+  }
+  home_go(){
+    this.navCtrl.pop();
+   this.navCtrl.push(HomePage);
+  }
+
+
   registr(){  
-    this.getdata.registr(this.surname,this.name, this.login,this.password);
+    // this.getdata.registr(this.surname,this.name, this.login,this.password);
     this.navCtrl.setRoot(HomePage);
 
   }

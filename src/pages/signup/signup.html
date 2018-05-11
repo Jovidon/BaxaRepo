@@ -1,58 +1,173 @@
-<ion-header>
 
-  <ion-navbar>
-    <ion-title>SignUp</ion-title>
-  </ion-navbar>
+<nav class="navbar  navbar-color-on-scroll fixed-top navbar-expand-lg"  id="sectionsNav" style="background-color: #6c757d;">
+    <div class="container">
+      <div class="navbar-translate">
+        <img src="assets/img/logo.png" style="max-width: 250px; width:65%;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          
+         
+         <li>
+              <div (click)="home_go()" class="dropdown-item" style="font-size: 14px;"> 
+                 <i class="material-icons">home</i>
+                 <b class="text-center" style="vertical-align: super; padding:  3px;"> Bosh sahifa</b>
+              </div>
+         </li>
 
-</ion-header>
+         <li>
+              <div (click)="go()" class="dropdown-item" style="font-size: 14px;"> 
+                <i class="material-icons">meeting_room</i> 
+                <b class="text-center" style="vertical-align: super; padding:  3px;"> Kirish </b>
+              </div>
+         </li> 
+
+         <li>
+              <div (click)="help()" class="dropdown-item" style="font-size: 14px;"> 
+                 <i class="material-icons">help</i> 
+                 <b class="text-center" style="vertical-align: super; padding:  3px;"> Yordam </b>
+              </div>
+          </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  
+  </nav>
 
 
-<ion-content padding>
-    <ion-content padding>
-        <ion-grid>
-          <ion-row>
-            <br>
-            <br>
-            <br>
-          </ion-row>
-          <ion-row>
-              <ion-col offset-1>
-                <ion-item float>  
-                  <ion-label>Surname</ion-label>
-                  <ion-input [(ngModel)]="surname"></ion-input>
-                </ion-item>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col offset-1>
-                  <ion-item float>  
-                    <ion-label>Name</ion-label>
-                    <ion-input [(ngModel)]="name"></ion-input>
-                  </ion-item>
-                </ion-col>
-              </ion-row>
-          <ion-row>
-            <ion-col offset-1>
-              <ion-item float>  
-                <ion-label>Login</ion-label>
-                <ion-input [(ngModel)]="login"></ion-input>
-              </ion-item>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col offset-1>
-                <ion-item float>  
-                  <ion-label>Password</ion-label>
-                  <ion-input [(ngModel)]="password"></ion-input>
-                </ion-item>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col offset-2>
-                <button ion-button (click)="registr()">
-                    Registr
-                </button>
-              </ion-col>
-            </ion-row>
-            </ion-grid>
+<ion-content >
+
+ 
+
+  <div class="page-header header-filter" filter-color="purple" style="background-image: url('assets/img/bg7.jpg')">
+    <div class="container">
+      <div class="row" style="margin-top: -15px;">
+        <div class="col-md-7 ml-auto mr-auto">
+          <div class="card card-signup">
+            <h2 class="card-title text-center">Ro'yxatdan o'tish</h2>
+            <div class="card-body">
+              <div class="row">
+              <div class="col-md-2 mr-auto"></div>
+                <div class="col-md-7 mr-auto">
+                
+                  <form class="form" method="" action="">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons"></i>
+                          </span>
+                        </div>
+                        
+                         <input [(ngModel)]="login" name="login" class="form-control" placeholder="Login" >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons"></i>
+                          </span>
+                        </div>
+                        <input [(ngModel)]="password" type="password"  name="password" class="form-control" placeholder="Parol">                
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons"></i>
+                          </span>
+                        </div>
+                        <input [(ngModel)]="password2" type="password"  name="password2" class="form-control" placeholder="Parol (qayta)">                
+                      </div>
+                    </div>
+                   
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons"></i>
+                          </span>
+                        </div>
+                        <input [(ngModel)]="first_name" type="text"  name="first_name" class="form-control" placeholder="Familiyangiz...">                
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons"></i>
+                          </span>
+                        </div>
+                        <input [(ngModel)]="last_name" type="text"  name="last_name" class="form-control" placeholder="Ismingiz...">                
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons"></i>
+                          </span>
+                        </div>
+                        <input [(ngModel)]="email" type="email"  name="email" class="form-control" placeholder="E-mail...">                
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons"></i>
+                          </span>
+                        </div>
+                        <input [(ngModel)]="file" type="file"  name="file" class="form-control" >                
+                      </div>
+                    </div>
+
+
+                    <div class="text-center">
+                      <a href="" (click)="reg" class="btn btn-primary btn-round" style="font-size: 120%;">Ro'yxatdan o'tish</a>
+                    </div>
+                  </form>
+                  <br>
+                 <div class="text-center">
+                  <div style="float: left; padding : 5px;"> 
+                    <p (click)="go()" style="font-size: 15px; float : left; text-align: center"><u> Kirish</u></p>  
+                  </div>
+                   <div  style="float: right; padding : 5px; ">
+                    <p (click)="reset()" style="font-size: 15px; float : left;"><u> Parolni unutdim</u></p>   
+                   </div>
+                 </div>
+                </div>
+                <div class="col-md-1 mr-auto"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="assets/js/plugins/moment.min.js"></script>
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <script src="assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+  <script src="assets/js/material-kit.js?v=2.0.3" type="text/javascript"></script>
 </ion-content>
