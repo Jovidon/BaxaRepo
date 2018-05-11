@@ -1,3 +1,12 @@
 {
-    "hello": "Salom"
+    "placeEnterSystem": "Tizimga kirish",
+    "buttonEnter" : "Kirish",
+    "registr": "Ro'yxatdan o'tish",
+    "forgetPassword" : "Parolni unutdim",
+    "headPage" : "Bosh sahifa",
+    "news":"Yangiliklar",
+    "subjects": "Darsliklar",
+    "questions": "Savol-javob",
+    "surname" :"Familiyangiz...",
+    "name" :"Ismingiz..."
 }

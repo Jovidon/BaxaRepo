@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>fullNew</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div *ngIf="lang===uz">
+        <ion-card >
+          <div class="ion-header">{{news.title_uz}}</div>
+            <img src="http://192.168.137.1/uploads/{{news.image}}" />
+                <div   [innerHTML]="news.content_uz">   </div>   
+         </ion-card>
+    </div>
+    <div *ngIf="lang===ru">
+        <ion-card text-wrap >
+          <div class="ion-header">{{news.title_ru}}</div>
+            <img src="http://192.168.137.1/uploads/{{news.image}}" />
+                <div   [innerHTML]="news.content_ru">   </div>   
+         </ion-card>
+    </div>
+</ion-content>

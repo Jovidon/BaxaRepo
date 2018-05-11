@@ -1,4 +1,4 @@
-
+<!--
 <nav class="navbar  navbar-color-on-scroll fixed-top navbar-expand-lg"  id="sectionsNav" style="background-color: #6c757d;">
     <div class="container">
       <div class="navbar-translate">
@@ -40,10 +40,11 @@
     </div>
   
   </nav>
-
+-->
 
 <ion-content >
-
+   
+  <!--
  
 
   <div class="page-header header-filter" filter-color="purple" style="background-image: url('assets/img/bg7.jpg')">
@@ -51,7 +52,7 @@
       <div class="row" style="margin-top: -15px;">
         <div class="col-md-7 ml-auto mr-auto">
           <div class="card card-signup">
-            <h2 class="card-title text-center">Ro'yxatdan o'tish</h2>
+            <h2 class="card-title text-center">{{'registr' | translate}}</h2>
             <div class="card-body">
               <div class="row">
               <div class="col-md-2 mr-auto"></div>
@@ -87,7 +88,7 @@
                             <i class="material-icons"></i>
                           </span>
                         </div>
-                        <input [(ngModel)]="password2" type="password"  name="password2" class="form-control" placeholder="Parol (qayta)">                
+                        <input [(ngModel)]="password2" type="password"  name="password2" class="form-control" placeholder="Parol **">                
                       </div>
                     </div>
                    
@@ -98,7 +99,7 @@
                             <i class="material-icons"></i>
                           </span>
                         </div>
-                        <input [(ngModel)]="first_name" type="text"  name="first_name" class="form-control" placeholder="Familiyangiz...">                
+                        <input [(ngModel)]="surname" type="text"   name="first_name" class="form-control" placeholder="{{'surname' | translate }}">                
                       </div>
                     </div>
 
@@ -109,7 +110,7 @@
                             <i class="material-icons"></i>
                           </span>
                         </div>
-                        <input [(ngModel)]="last_name" type="text"  name="last_name" class="form-control" placeholder="Ismingiz...">                
+                        <input [(ngModel)]="name" type="text"  name="last_name" class="form-control" placeholder="{{'name' | translate }}">                
                       </div>
                     </div>
                     
@@ -136,17 +137,15 @@
                     </div>
 
 
-                    <div class="text-center">
-                      <a href="" (click)="reg" class="btn btn-primary btn-round" style="font-size: 120%;">Ro'yxatdan o'tish</a>
-                    </div>
+                   <button ion-button round (click)="registr()" > {{'registr' | translate }}</button>
                   </form>
                   <br>
                  <div class="text-center">
                   <div style="float: left; padding : 5px;"> 
-                    <p (click)="go()" style="font-size: 15px; float : left; text-align: center"><u> Kirish</u></p>  
+                    <p (click)="go()" style="font-size: 15px; float : left; text-align: center"><u> {{'buttonEnter' | translate}}</u></p>  
                   </div>
                    <div  style="float: right; padding : 5px; ">
-                    <p (click)="reset()" style="font-size: 15px; float : left;"><u> Parolni unutdim</u></p>   
+                    <p (click)="reset()" style="font-size: 15px; float : left;"><u>{{'forgetPassword' | translate }}</u></p>   
                    </div>
                  </div>
                 </div>
@@ -159,15 +158,16 @@
     </div>
     
   </div>
-  <!--   Core JS Files   -->
-  <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
-  <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
-  <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
-  <script src="assets/js/plugins/moment.min.js"></script>
-  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-  <script src="assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
-  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-  <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-  <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
-  <script src="assets/js/material-kit.js?v=2.0.3" type="text/javascript"></script>
+   Core JS Files   -->
+      <ion-col offset-3>
+        <ion-input [(ngModel)]="surname" placeholder="{{'surname' | translate }}" ></ion-input>
+        <ion-input [(ngModel)]="name" placeholder="{{'name' | translate }}" ></ion-input>
+        <ion-input [(ngModel)]="login" placeholder="Login" ></ion-input>
+        <ion-input [(ngModel)]="password" placeholder="Parol" ></ion-input>
+        <ion-input [(ngModel)]="email" placeholder="Mail" ></ion-input>
+      </ion-col>
+      <ion-col offset-3>  
+        <button ion-button round (click)="registr()" > {{'registr' | translate }}</button>
+      </ion-col>
+
 </ion-content>

@@ -9,5 +9,8 @@
 
 
 <ion-content padding>
-  
+    <h3>{{'surname' | translate}}: {{user.surname}}</h3>
+    <h3>{{'name' | translate }}: {{user.name}}</h3>
+    <h3>Email: {{user.email}}</h3>
+    <button ion-button (click)="goToNews()">News</button>
 </ion-content>

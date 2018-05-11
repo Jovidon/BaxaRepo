@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { GetdataProvider } from './../../providers/getdata/getdata';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { TranslateService } from '@ngx-translate/core';
+import { FullNewPage } from '../full-new/full-new';
 
 
 @IonicPage()
@@ -19,10 +20,17 @@ export class NewPage {
   created_date : any [];
   image : any [];
   id : any [];
-
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams,public getdata : GetdataProvider) {
+  uz="uz";
+  ru="ru";
+  lang : string ;
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public getdata : GetdataProvider,
+     public translate : TranslateService,) {
     this.getNews();
+
+    this.getCurrentLang();
    
 
  }
@@ -57,6 +65,15 @@ infiniteScroll.complete();
 }, 500);
 }
 
+getCurrentLang(){
+  
+     this.lang = this.translate.getDefaultLang();
+  
+   }
+
+   goToFull(data){
+     this.navCtrl.push(FullNewPage, {data});
+   }
 
 
   

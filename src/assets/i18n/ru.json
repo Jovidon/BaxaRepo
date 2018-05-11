@@ -1,3 +1,12 @@
 {
-    "hello":"valekum"
+    "placeEnterSystem": "Вход в систему",
+    "buttonEnter" : "Вход",
+    "registr": "Регистрация",
+    "forgetPassword" : "Забыл пароль",
+    "headPage" : "Главная",
+    "news":"Новости",
+    "subjects": "Уроки",
+    "questions": "Вопросы и ответы",
+    "surname" :"Фамилия...",
+    "name" :"Имя..."
 }
