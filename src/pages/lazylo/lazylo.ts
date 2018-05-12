@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 //db
-
+import { LessonsPage } from './../lessons/lessons';
 import { getRepository, Repository } from 'typeorm';
 import { UserRepository } from './../../enteties/user';
 import { NewPage } from '../new/new';
@@ -34,6 +34,11 @@ export class LazyloPage {
 
 goToNews(){
   this.navCtrl.push(NewPage);
+}
+
+goToless(){
+  this.navCtrl.push(LessonsPage);
+
 }
 
 

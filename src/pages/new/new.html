@@ -1,28 +1,20 @@
 
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>new</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>{{'news' | translate}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content>
-      <div *ngIf="lang===uz">
-          <ion-card text-wrap *ngFor="let item of news" (click)="goToFull(item)">
-            <div class="ion-header">{{item.title_uz}}</div>
-              <img src="http://192.168.137.1/uploads/{{item.image}}" />
-           </ion-card>
-      </div>
-      <div *ngIf="lang===ru">
-          <ion-card text-wrap *ngFor="let item of news" (click)="goToFull(item)">
-            <div class="ion-header">{{item.title_ru}}</div>
-              <img src="http://192.168.137.1/uploads/{{item.image}}" />
-           </ion-card>
-      </div>
-      
+  <ion-card text-wrap *ngFor="let item of news">
+    <div class="ion-header">{{item.title_uz}}</div>
+      <img src="http://192.168.137.1/uploads/{{item.image}}" />
+         <div   [innerHTML]="item.content_uz">   </div>   
+ </ion-card>
 
-  
+
 <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
 <ion-infinite-scroll-content></ion-infinite-scroll-content>
 </ion-infinite-scroll>

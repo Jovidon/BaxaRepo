@@ -1,16 +1,34 @@
 
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>lazylo</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>My Profile</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <h3>{{'surname' | translate}}: {{user.surname}}</h3>
-    <h3>{{'name' | translate }}: {{user.name}}</h3>
-    <h3>Email: {{user.email}}</h3>
-    <button ion-button (click)="goToNews()">News</button>
+    <ion-item>
+        <ion-avatar item-left>
+            <ion-icon name="person"></ion-icon>
+      </ion-avatar>
+      <h2>{{'surname' | translate}}: {{user.surname}}</h2>
+      <p>{{'name' | translate }}: {{user.name}}</p>
+    </ion-item>
+    
+    <ion-list>
+      <ion-item (click)="goToNews()">
+          <ion-avatar item-left>
+              <ion-icon name="card"></ion-icon>
+        </ion-avatar>
+        <h2>{{'news' | translate }}</h2>
+      </ion-item>
+      <ion-item (click)="goToless()">
+          <ion-avatar item-left>
+              <ion-icon name="book"></ion-icon>
+        </ion-avatar>
+        <h2>{{'subjects' | translate }}</h2>
+      </ion-item>
+    </ion-list>
 </ion-content>

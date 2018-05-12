@@ -1,173 +1,62 @@
-<!--
-<nav class="navbar  navbar-color-on-scroll fixed-top navbar-expand-lg"  id="sectionsNav" style="background-color: #6c757d;">
-    <div class="container">
-      <div class="navbar-translate">
-        <img src="assets/img/logo.png" style="max-width: 250px; width:65%;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" >
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          
-         
-         <li>
-              <div (click)="home_go()" class="dropdown-item" style="font-size: 14px;"> 
-                 <i class="material-icons">home</i>
-                 <b class="text-center" style="vertical-align: super; padding:  3px;"> Bosh sahifa</b>
-              </div>
-         </li>
-
-         <li>
-              <div (click)="go()" class="dropdown-item" style="font-size: 14px;"> 
-                <i class="material-icons">meeting_room</i> 
-                <b class="text-center" style="vertical-align: super; padding:  3px;"> Kirish </b>
-              </div>
-         </li> 
-
-         <li>
-              <div (click)="help()" class="dropdown-item" style="font-size: 14px;"> 
-                 <i class="material-icons">help</i> 
-                 <b class="text-center" style="vertical-align: super; padding:  3px;"> Yordam </b>
-              </div>
-          </li>
-            
-          
-        </ul>
-      </div>
-    </div>
-  
-  </nav>
--->
+<ion-header>
+    <ion-navbar color="primary">
+        <div text-center style="color:white;">
+            {{'registr' | translate }}
+        </div>
+    </ion-navbar>
+  </ion-header>
 
 <ion-content >
-   
-  <!--
- 
 
-  <div class="page-header header-filter" filter-color="purple" style="background-image: url('assets/img/bg7.jpg')">
-    <div class="container">
-      <div class="row" style="margin-top: -15px;">
-        <div class="col-md-7 ml-auto mr-auto">
-          <div class="card card-signup">
-            <h2 class="card-title text-center">{{'registr' | translate}}</h2>
-            <div class="card-body">
-              <div class="row">
-              <div class="col-md-2 mr-auto"></div>
-                <div class="col-md-7 mr-auto">
+    <ion-grid>
+      <ion-row text-center></ion-row>
+      <ion-row>
+        <ion-col >
+          <ion-item >
+            <ion-label floating> {{'surname' | translate }}</ion-label>
+            <ion-input [(ngModel)]="surname"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col >
+            <ion-item >
+              <ion-label floating> {{'name' | translate }}</ion-label>
+              <ion-input [(ngModel)]="name"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col >
+              <ion-item >
+                <ion-label floating>Login</ion-label>
+                <ion-input [(ngModel)]="login"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col >
+                <ion-item >
+                  <ion-label floating>Parol</ion-label>
+                  <ion-input [(ngModel)]="password"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label floating>Email</ion-label>
+                    <ion-input [(ngModel)]="email"></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col></ion-col>
+                  <ion-col>
+                    <button ion-button round (click)="registr()" > {{'registr' | translate }}</button>
+                  </ion-col>
+                  <ion-col></ion-col>
+                </ion-row>
                 
-                  <form class="form" method="" action="">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons"></i>
-                          </span>
-                        </div>
-                        
-                         <input [(ngModel)]="login" name="login" class="form-control" placeholder="Login" >
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons"></i>
-                          </span>
-                        </div>
-                        <input [(ngModel)]="password" type="password"  name="password" class="form-control" placeholder="Parol">                
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons"></i>
-                          </span>
-                        </div>
-                        <input [(ngModel)]="password2" type="password"  name="password2" class="form-control" placeholder="Parol **">                
-                      </div>
-                    </div>
-                   
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons"></i>
-                          </span>
-                        </div>
-                        <input [(ngModel)]="surname" type="text"   name="first_name" class="form-control" placeholder="{{'surname' | translate }}">                
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons"></i>
-                          </span>
-                        </div>
-                        <input [(ngModel)]="name" type="text"  name="last_name" class="form-control" placeholder="{{'name' | translate }}">                
-                      </div>
-                    </div>
-                    
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons"></i>
-                          </span>
-                        </div>
-                        <input [(ngModel)]="email" type="email"  name="email" class="form-control" placeholder="E-mail...">                
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons"></i>
-                          </span>
-                        </div>
-                        <input [(ngModel)]="file" type="file"  name="file" class="form-control" >                
-                      </div>
-                    </div>
-
-
-                   <button ion-button round (click)="registr()" > {{'registr' | translate }}</button>
-                  </form>
-                  <br>
-                 <div class="text-center">
-                  <div style="float: left; padding : 5px;"> 
-                    <p (click)="go()" style="font-size: 15px; float : left; text-align: center"><u> {{'buttonEnter' | translate}}</u></p>  
-                  </div>
-                   <div  style="float: right; padding : 5px; ">
-                    <p (click)="reset()" style="font-size: 15px; float : left;"><u>{{'forgetPassword' | translate }}</u></p>   
-                   </div>
-                 </div>
-                </div>
-                <div class="col-md-1 mr-auto"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-   Core JS Files   -->
-      <ion-col offset-3>
-        <ion-input [(ngModel)]="surname" placeholder="{{'surname' | translate }}" ></ion-input>
-        <ion-input [(ngModel)]="name" placeholder="{{'name' | translate }}" ></ion-input>
-        <ion-input [(ngModel)]="login" placeholder="Login" ></ion-input>
-        <ion-input [(ngModel)]="password" placeholder="Parol" ></ion-input>
-        <ion-input [(ngModel)]="email" placeholder="Mail" ></ion-input>
-      </ion-col>
-      <ion-col offset-3>  
-        <button ion-button round (click)="registr()" > {{'registr' | translate }}</button>
-      </ion-col>
-
+    </ion-grid>
 </ion-content>
