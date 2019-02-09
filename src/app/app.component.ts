@@ -26,13 +26,13 @@ import { UserRepository } from './../enteties/user';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any ;
+  rootPage: any = LessonsPage ;
 
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public translate : TranslateService) {
-    this.initializeApp();
-
+    //this.initializeApp();
+    
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },

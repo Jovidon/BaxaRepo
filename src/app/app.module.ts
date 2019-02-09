@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { GetdataProvider } from './../providers/getdata/getdata';
 import { MyApp } from './app.component';
+import { SMS } from '@ionic-native/sms';
 
+import { SecureStorage } from '@ionic-native/secure-storage';
 
 //pages 
 
@@ -18,7 +20,7 @@ import { LessonsPage }  from './../pages/lessons/lessons';
 import { LanguagePage } from './../pages/language/language';
 import { LazyloPage } from './../pages/lazylo/lazylo'; 
 import { FullNewPage } from './../pages/full-new/full-new';
-
+import { RenderPage } from './../pages/render/render';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -39,7 +41,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LessonsPage,
     LanguagePage,
     LazyloPage,
-    FullNewPage
+    FullNewPage,
+    RenderPage
       
   ],
   imports: [
@@ -67,13 +70,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LessonsPage,
     LanguagePage,
     LazyloPage,
-    FullNewPage
+    FullNewPage,
+    RenderPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    GetdataProvider
+    GetdataProvider,
+    SMS,
+    SecureStorage
   ]
 })
 export class AppModule {}

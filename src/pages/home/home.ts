@@ -12,6 +12,7 @@ import { LazyloPage } from '../lazylo/lazylo';
 
 import { getRepository, Repository } from 'typeorm';
 import { UserRepository } from './../../enteties/user';
+import { RenderPage } from '../render/render';
 
 
 @Component({
@@ -31,9 +32,7 @@ export class HomePage {
      public navCtrl: NavController, 
      public getdata: GetdataProvider,
     public toastCtrl : ToastController) {
-  
-   this.getUsers();
-   this.getAll();
+
   }
 
   getUsers() {
@@ -56,10 +55,10 @@ reg(){
 }
 
 go () {
-  this.navCtrl.push(HomePage);
+  this.navCtrl.setRoot(RenderPage);
 }
 help() {
-  this.navCtrl.push(ListPage);
+  this.navCtrl.setRoot(ListPage);
 }
 news() {
   this.navCtrl.push(NewPage);

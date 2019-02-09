@@ -1,43 +1,22 @@
 <ion-header>
-  <ion-navbar  color="primary">
-      <div text-center style="color:white;">
-          {{'placeEnterSystem' | translate }}
-      </div>
+  <ion-navbar color="secondary">
+    <ion-title>
+    </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content >
-  <ion-grid>
-    <ion-row item-center>
-      <ion-col>
-        <ion-item>
-          <ion-label>Login</ion-label>
-          <ion-input [(ngModel)]="login"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <ion-row item-center>
-        <ion-col>
-          <ion-item>
-            <ion-label>Parol</ion-label>
-            <ion-input [(ngModel)]="password"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col></ion-col>
-        <ion-col>
-            <button ion-button round full (click)="enter()" >{{'buttonEnter' | translate}}</button>
-        </ion-col>
-        <ion-col></ion-col>
-      </ion-row>
-      <ion-row>
-          
-          <ion-col >
-              <button ion-button round full (click)="reg()">{{'registr' | translate }}</button>
-          </ion-col>
-        
-        </ion-row>
-  </ion-grid>
-    
-    
+
+<ion-content style="background: url('assets/imgs/bg5.jpg'); background-size: cover;">
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+  <div text-center>
+    <button ion-button (click)="go()" round color="secondary"> Obuna bo'lish</button>
+  </div>
 </ion-content>
